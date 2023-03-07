@@ -1,4 +1,4 @@
-// pas utiliser actuellement
+// pas utilisé actuellement
 <template>
   <div class="product-image">
     <img src="image" />
