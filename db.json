@@ -1,5 +1,5 @@
 {
-      "checkouts" : [
+      "checkouts": [
         {
           "id": 2344534,
           "image":
@@ -43,4 +43,4 @@
           "location": "Afrique",
         },
       ],
-    }
+}
