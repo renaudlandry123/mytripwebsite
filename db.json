@@ -1,46 +1,46 @@
 {
-      checkouts: [
+      "checkouts" : [
         {
-          id: 2344534,
-          image:
+          "id": 2344534,
+          "image":
             "https://th.bing.com/th/id/OIP.q7JicrMLMk8lRlF5LNRFAAHaEH?w=283&h=180&c=7&r=0&o=5&dpr=2&pid=1.7",
-          price: 2500000 + "$",
+          "price": 2500000 + "$",
           location: "panama",
         },
         {
-          id: 2947567,
-          image:
+          "id": 2947567,
+          "image":
             "https://i.pinimg.com/originals/ab/65/8d/ab658dbb9183361c92b582ee3c8f8ee4.jpg",
-          price: 1950000 + "$",
-          location: "Costa Rica",
+          "price": 1950000 + "$",
+          "location": "Costa Rica",
         },
         {
-          id: 3847394,
-          image:
+          "id": 3847394,
+          "image":
             "https://th.bing.com/th/id/R.1838f3b910746676952d96d5896d3cc2?rik=q9P2niZRhGx3og&riu=http%3a%2f%2fwww.bakpoki.com%2fwp-content%2fuploads%2f2017%2f03%2fdominicalito-costa-rica-1-1500x1000.jpg&ehk=%2bgJeCrfYjDhvEpGo3HRxJTY1eSEFaRV5%2feI69JJvh6Y%3d&risl=&pid=ImgRaw&r=0",
-          price: 2850000 + "$",
-          location: "Cuba",
+          "price": 2850000 + "$",
+          "location": "Cuba",
         },
         {
-          id: 6758493,
-          image:
+          "id": 6758493,
+          "image":
             "https://th.bing.com/th/id/OIP.oDN0h4bNTRKydEcbj91X0AHaEH?pid=ImgDet&rs=1",
-          price: 3150000 + "$",
-          location: "Thaïlande",
+          "price": 3150000 + "$",
+          "location": "Thaïlande",
         },
         {
-          id: 8846374,
-          image:
+          "id": 8846374,
+          "image":
             "https://www.ciee.org/sites/default/files/content/program/main-image/gettyimages-511992658.jpg",
-          price: 3500000 + "$",
-          location: "Floride",
+          "price": 3500000 + "$",
+          "location": "Floride",
         },
         {
-          id: 2846674,
-          image:
+          "id": 2846674,
+          "image":
             "https://tdviajes.com/wp-content/uploads/2020/07/75625_study_abroad_caribbean_costa_rica_monteverde_open_campus_gettyimages-1136250609_0_0.jpg",
-          price: 2500000,
-          location: "Afrique",
+          "price": 2500000,
+          "location": "Afrique",
         },
       ],
     };
