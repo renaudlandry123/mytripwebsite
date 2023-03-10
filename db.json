@@ -2,8 +2,7 @@
   checkouts: [
     {
       id: 2344534,
-      image:
-        "https://th.bing.com/th/id/OIP.q7JicrMLMk8lRlF5LNRFAAHaEH?w=283&h=180&c=7&r=0&o=5&dpr=2&pid=1.7",
+      image: "https://th.bing.com/th/id/OIP.q7JicrMLMk8lRlF5LNRFAAHaEH?w=283&h=180&c=7&r=0&o=5&dpr=2&pid=1.7",
       price: 2500000,
       location: "Panama",
     },
