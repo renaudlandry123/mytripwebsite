@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import AccueilView from "../views/AccueilView.vue";
+import CheckoutDetails from "../views/CheckoutDetails.vue";
 import ReservationView from "../views/ReservationView.vue";
-import MaisonView from "../views/MaisonView.vue";
-import TerrainView from "../views/TerrainView.vue";
 
 const routes = [
   {
@@ -11,19 +10,15 @@ const routes = [
     component: AccueilView,
   },
   {
+    path: "/Checkout/:id",
+    name: "CheckoutDetails",
+    props: true,
+    component: CheckoutDetails,
+  },
+  {
     path: "/Reservation",
     name: "Reservation",
     component: ReservationView,
-  },
-  {
-    path: "/Maison",
-    name: "Maison",
-    component: MaisonView,
-  },
-  {
-    path: "/Terrain",
-    name: "Terrain",
-    component: TerrainView,
   },
 ];
 
@@ -33,3 +28,4 @@ const router = createRouter({
 });
 
 export default router;
+
