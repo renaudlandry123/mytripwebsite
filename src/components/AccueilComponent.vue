@@ -1,114 +1,31 @@
 <template>
-  <div class="accueil">
-    <div class="fade-container">
-      <img class="fade-img" src="../assets/imageAccueil.jpg" />
-      <img class="fade-img" src="../assets/image3.jpg" />
-      <img class="fade-img" src="../assets/image4.jpg" />
-    </div>
-    <h1
-      style="
-        font-family: 'Arial, sans-serif', Courier, monospace;
-        font-size: 36px;
-        font-weight: bold;
-        color: #333;
-      "
-    >
-      Les offres de la semaine !!!
-    </h1>
-    <div class="image-grid">
-      <div class="image-container">
-        <img src="../assets/image1.jpg" />
-        <div class="image-overlay">
+  <router-link :to="{ name: 'CheckoutDetails', params: { id: checkout.id } }">
+    <div class="accueil">
+      <div class="image-grid">
+        <div v-if="checkout" class="image-container">
+          <img :src="checkout.image" />
           <div class="image-overlay">
-            <p class="price">$2'500'000</p>
-            <p class="location">Costa Rica</p>
-          </div>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/image2.jpg" />
-        <div class="image-overlay">
-          <div class="image-overlay">
-            <p class="price">$2'200'000</p>
-            <p class="location">Thaïlande</p>
-          </div>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/image3.jpg" />
-        <div class="image-overlay">
-          <div class="image-overlay">
-            <p class="price">$3'400'000</p>
-            <p class="location">Panama</p>
-          </div>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/image4.jpg" />
-        <div class="image-overlay">
-          <div class="image-overlay">
-            <p class="price">$1'900'000$</p>
-            <p class="location">Mexique</p>
-          </div>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/image5.jpg" />
-        <div class="image-overlay">
-          <div class="image-overlay">
-            <p class="price">$3'200'000$</p>
-            <p class="location">Cuba</p>
-          </div>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/image6.jpg" />
-        <div class="image-overlay">
-          <div class="image-overlay">
-            <p class="price">$2'000'000</p>
-            <p class="location">Bahamas</p>
+            <p class="price">${{ checkout.price }}</p>
+            <p class="location">{{ checkout.location }}</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: "AccueilComponent",
-  mounted() {
-    const images = document.querySelectorAll(".fade-img");
-    const duration = 7000;
-    let currentImageIndex = 0;
-
-    function fadeOutImage() {
-      images[currentImageIndex].classList.add("fade-out");
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-      images[currentImageIndex].classList.remove("fade-out");
-      setTimeout(fadeOutImage, duration);
-    }
-    fadeOutImage();
+  props: {
+    checkout: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>
 
 <style scoped>
-#ImageAccueil {
-  position: relative;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
-  clear: both;
-}
 .image-container {
   position: relative;
   margin: 20px;
@@ -125,15 +42,8 @@ export default {
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-
 .image-container:hover img {
   transform: scale(1.1);
-}
-
-.fade-container {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
 }
 
 .image-overlay {
@@ -172,21 +82,7 @@ export default {
   color: #fff;
   font-size: 16px;
   text-align: right;
-  margin: 90px;
-}
-
-.fade-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 2s;
-}
-
-.fade-img.fade-out {
-  opacity: 0;
+  margin: 55px;
 }
 </style>
+
